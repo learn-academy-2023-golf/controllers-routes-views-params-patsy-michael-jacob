@@ -16,5 +16,22 @@ class MainController < ApplicationController
             @answer = "No"
         end
     end
+
+    def palindrome
+        @word = params[:word]
+        if @word.reverse == @word
+            @answer = 'Yes' 
+        else 
+            @answer = 'No'
+        end
+    end
+
+    def madlibs 
+        @noun = params[:noun]
+        @verb = params[:verb]
+        @adjective = params[:adjective]
+        @adverb = params[:adverb]
+
+    end
     
 end
